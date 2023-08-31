@@ -130,17 +130,21 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>Code Translator</title>
+        <title>ChatGPT代码翻译工具 | 人工智能OpenAI代码翻译器</title>
         <meta
           name="description"
-          content="Use AI to translate code from one language to another."
+          content="代码语言翻译器是一种使用人工智能ChatGPT将代码从一种语言翻译成另一种语言的在线翻译工具."
+        />
+        <meta
+          name="keywords"
+          content="代码翻译,代码翻译工具,在线代码翻译,免费代码翻译,代码语言翻译,代码转换工具,代码互转工具,AI代码翻译,人工智能代码翻译平台."
         />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <div className="flex h-full min-h-screen flex-col items-center bg-[#0E1117] px-4 pb-20 text-neutral-200 sm:px-10">
         <div className="mt-10 flex flex-col items-center justify-center sm:mt-20">
-          <div className="text-4xl font-bold">AI Code Translator</div>
+          <div className="text-4xl font-bold">人工智能代码翻译</div>
         </div>
 
         <div className="mt-6 text-center text-sm">
@@ -155,16 +159,16 @@ export default function Home() {
             onClick={() => handleTranslate()}
             disabled={loading}
           >
-            {loading ? 'Translating...' : 'Translate'}
+            {loading ? '翻译中...' : '点击翻译'}
           </button>
         </div>
 
         <div className="mt-2 text-center text-xs">
           {loading
-            ? 'Translating...'
+            ? '翻译中...'
             : hasTranslated
-            ? 'Output copied to clipboard!'
-            : 'Enter some code and click "Translate"'}
+            ? '输出已复制到剪贴板！'
+            : '输入一些代码并单击“翻译”'}
         </div>
 
         <div className="mt-6 flex w-full max-w-[1200px] flex-col justify-between sm:flex-row sm:space-x-4">
